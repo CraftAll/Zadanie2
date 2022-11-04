@@ -1,0 +1,110 @@
+<form formGroupName="form">
+  <div>
+    <div>
+      <mat-form-field>
+        <mat-label>Organizacja</mat-label>
+        <mat-select formControlName="organization" placeholder="">
+          <mat-option value="XYZ">XYZ</mat-option>
+          <mat-option value="ABC">ABC</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Nazwa oferty</mat-label>
+        <input
+          matInput
+          formControlName="formControlName"
+          type="text"
+          required
+          placeholder=""
+        />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Nazwa ośrodka</mat-label>
+        <mat-select>
+          <mat-option value="abc"> abc </mat-option>
+          <mat-option value="xyz"> xyz </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div>
+      <mat-form-field>
+        <mat-label>Nr rezerwacji</mat-label>
+        <input matInput />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Początek pobytu</mat-label>
+        <input matInput [matDatepicker]="start" />
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
+        <mat-datepicker #start></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Koniec pobytu</mat-label>
+        <input matInput [matDatepicker]="end" />
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
+        <mat-datepicker #end></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Dodatkowe informacje nt. umowy, pobytu, ośrodka</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>Data sprzedaży</mat-label>
+      <input matInput [matDatepicker]="saleDate" />
+      <mat-hint>DD/MM/YYYY</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="saleDate"></mat-datepicker-toggle>
+      <mat-datepicker #saleDate></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Wartość sprzedaży</mat-label>
+      <input matInput type="number" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Waluta</mat-label>
+      <mat-select formControlName="currency">
+        <mat-option value="PLN">PLN</mat-option>
+        <mat-option value="EUR">EUR</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <p>
+      Zgoda na przetwarzanie danych osobowych w celu marketingu po wygaśnięciu
+      umowy
+      <mat-radio-group>
+        <mat-radio-button value="1">TAK</mat-radio-button>
+        <mat-radio-button value="0">NIE</mat-radio-button>
+      </mat-radio-group>
+    </p>
+    <p>
+      Zgoda na przetwarzanie danych osobowych za pośrednictwem komunikacji
+      elektoronicznej
+      <mat-radio-group>
+        <mat-radio-button value="1">TAK</mat-radio-button>
+        <mat-radio-button value="0">NIE</mat-radio-button>
+      </mat-radio-group>
+    </p>
+    <p>
+      Zgoda na przetwarzanie danych osobowych za pośrednictwem połączeń
+      głosowych
+      <mat-radio-group>
+        <mat-radio-button value="1">TAK</mat-radio-button>
+        <mat-radio-button value="0">NIE</mat-radio-button>
+      </mat-radio-group>
+    </p>
+  </div>
+</form>
